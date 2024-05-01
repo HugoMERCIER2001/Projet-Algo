@@ -1,3 +1,4 @@
 *.o
 blobwar
 launchStrategy
+blobwar_server
