@@ -1,0 +1,4 @@
+/home/hugo/2A/Algo Projet/Projet-Algo/blobwar-1.2/tests/build/CMakeFiles/test_display.dir
+/home/hugo/2A/Algo Projet/Projet-Algo/blobwar-1.2/tests/build/CMakeFiles/test_affichage.dir
+/home/hugo/2A/Algo Projet/Projet-Algo/blobwar-1.2/tests/build/CMakeFiles/edit_cache.dir
+/home/hugo/2A/Algo Projet/Projet-Algo/blobwar-1.2/tests/build/CMakeFiles/rebuild_cache.dir

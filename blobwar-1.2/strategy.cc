@@ -1,9 +1,16 @@
 #include "strategy.h"
-
+#include <cmath>
 
 
 void Strategy::applyMove (const movement& mv) {
-        // To be completed...
+    //On part du principe que le mouvement est valide.
+    //On réalise le mouvement peut importe le player.
+        int distance = std::sqrt((mv.nx - mv.ox) * (mv.nx - mv.ox) + (mv.nx - mv.ox) * (mv.nx - mv.ox));
+        std::cout << "distance = " << distance << std::endl;
+        if(distance >= 2){
+            int old_value = (int) _blobs.get(mv.ox, mv.oy);
+            std::cout << "old value vaut : " << old_value << std::endl;
+        }
 }
 
 Sint32 Strategy::estimateCurrentScore () const {
