@@ -17,6 +17,5 @@ int main(){
     bidiarray<bool> holes = bidiarray<bool>();
     holes.display();
     Uint16 current_player = 1;
-    Strategy strat = Strategy (bidi, holes, current_player, *_saveBestMove());
     return 0;
 }

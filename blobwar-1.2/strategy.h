@@ -61,7 +61,7 @@ public:
         /**
          * Find the best move.
          */
-    void computeBestMove ();
+    void computeBestMove (int type_strategy);
     
     
 };
