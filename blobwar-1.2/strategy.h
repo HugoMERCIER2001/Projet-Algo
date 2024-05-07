@@ -32,7 +32,6 @@ public:
         {
         }
     
-              
     
         // Copy constructor
     Strategy (const Strategy& St)
@@ -41,7 +40,18 @@ public:
     
         // Destructor
     ~Strategy() {}
-    
+
+
+        /** 
+         * Get the value of the current player
+         */
+    int getCurrentPlayer();
+
+        /** 
+         * Set the value of the current player
+         */
+    void setCurrentPlayer(int value);
+
         /** 
          * Apply a move to the current state of blobs
          * Assumes that the move is valid
@@ -57,6 +67,16 @@ public:
          * Estimate the score of the current state of the game
          */
     Sint32 estimateCurrentScore () const;
+
+        /**
+         * Estimate the score of the current state of the game when it is a 1v1 and the score = (nbr of allies blobs - nbr of enemmy blobs).
+         */    
+    Sint32 estimateCurrentScoreDuel () const;
+
+        /**
+         * Use the min_max method to get the best movement.
+         */     
+    std::tuple<movement, int> Strategy::min_max(int profondeur, Strategy strat);
 
         /**
          * Find the best move.
