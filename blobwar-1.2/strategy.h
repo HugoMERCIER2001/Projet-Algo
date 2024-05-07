@@ -45,7 +45,7 @@ public:
         /** 
          * Get the value of the current player
          */
-    int getCurrentPlayer();
+    int getCurrentPlayer() const;
 
         /** 
          * Set the value of the current player
@@ -76,7 +76,17 @@ public:
         /**
          * Use the min_max method to get the best movement.
          */     
-    std::tuple<movement, int> Strategy::min_max(int profondeur, Strategy strat);
+    int min_max(int profondeur, Strategy strat);
+
+        /**
+         * Use the alpha_beta method to get the best movement.
+         */     
+    int alpha_beta(int profondeur, int alpha, int beta, Strategy strat);
+
+        /**
+         * Use the alpha_beta parralelle method to get the best movement.
+         */     
+    int alpha_beta_par(int profondeur, int alpha, int beta, Strategy strat);
 
         /**
          * Find the best move.

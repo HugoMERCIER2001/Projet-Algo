@@ -53,7 +53,7 @@ int main(int argc, char **argv) {
 	func = saveBestMoveToShmem;
 	
 	Strategy strategy(blobs, holes, cplayer, func);
-	strategy.computeBestMove(1);
+	strategy.computeBestMove(3);
 	
 	return 0;
 }

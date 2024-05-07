@@ -4,10 +4,12 @@ OBJS = strategy.o blobwar.o main.o font.o mouse.o image.o widget.o rollover.o bu
 
 OBJS_launchComputation = launchStrategy.o strategy.o bidiarray.o shmem.o
 
+TBB_INCLUDE = -I/path/to/tbb/include
+TBB_LIBRARY = -L/path/to/tbb/lib -ltbb
 
-LIBS = -lSDL_image -lSDL_ttf -lm `sdl-config --libs` -lSDL_net -lpthread
+LIBS = -lSDL_image -lSDL_ttf -lm `sdl-config --libs` -lSDL_net -lpthread $(TBB_LIBRARY)
 
-CFLAGS = -Wall -Werror -O3 -g `sdl-config --cflags`  -Wno-strict-aliasing -DDEBUG
+CFLAGS = -Wall -Werror -O3 -g `sdl-config --cflags`  -Wno-strict-aliasing -DDEBUG $(TBB_INCLUDE)
 CC = g++
 
 # $(sort) remove duplicate object
