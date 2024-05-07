@@ -141,6 +141,7 @@ void Strategy::computeBestMove (int type_strategy) {
     std::vector<movement> valid_moves;
     std::vector<movement> best_moves;
     Sint32 score = estimateCurrentScoreDuel();
+    movement mv = movement(0, 0, 0, 0);
     if(type_strategy == 0){
         //ALGO GLOUTON.
         //Reviens à regarder tous les mouvements possible, pour chaque mouvement estimer le score si on réalise le mouvement, puis on sauvegarde celui avec le meilleur score.
